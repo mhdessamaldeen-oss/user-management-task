@@ -1,0 +1,250 @@
+{
+  "info": {
+    "_postman_id": "50100091-0ee9ad7b-6eff-4968-b583-39dd4a84f36a",
+    "name": "User Management API (Final)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "chatgpt"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"Admin@123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5177/api/v1/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "auth", "login"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let json = pm.response.json();",
+                  "pm.environment.set('token', json.token);",
+                  "console.log('JWT saved to environment');"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Users",
+      "item": [
+
+        {
+          "name": "List Users",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users?page=1&pageSize=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "pageSize", "value": "10" }
+              ]
+            }
+          }
+        },
+
+        {
+          "name": "DataTable Server-Side",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"draw\": 1,\n  \"start\": 0,\n  \"length\": 10,\n  \"search\": { \"value\": \"\", \"regex\": false },\n  \"order\": [ { \"column\": 0, \"dir\": \"asc\" } ],\n  \"columns\": [\n    { \"data\": \"Username\", \"name\": \"Username\", \"searchable\": true, \"orderable\": true, \"search\": { \"value\": \"\", \"regex\": false } },\n    { \"data\": \"Email\", \"name\": \"Email\", \"searchable\": true, \"orderable\": true, \"search\": { \"value\": \"\", \"regex\": false } },\n    { \"data\": \"Role\", \"name\": \"Role\", \"searchable\": true, \"orderable\": true, \"search\": { \"value\": \"\", \"regex\": false } },\n    { \"data\": \"CreatedAt\", \"name\": \"CreatedAt\", \"searchable\": true, \"orderable\": true, \"search\": { \"value\": \"\", \"regex\": false } }\n  ]\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users/dt",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users", "dt"]
+            }
+          }
+        },
+
+        {
+          "name": "Get User By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users", "1"]
+            }
+          }
+        },
+
+        {
+          "name": "Create User (Admin Only)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"newUser1\",\n  \"email\": \"new@demo.com\",\n  \"password\": \"Password123!\",\n  \"role\": 2\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users"]
+            }
+          }
+        },
+
+        {
+          "name": "Update User (Admin Only)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"updatedUser\",\n  \"email\": \"updated@demo.com\",\n  \"role\": 2,\n  \"newPassword\": \"NewPass123!\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users", "1"]
+            }
+          }
+        },
+
+        {
+          "name": "Delete User (Soft Delete)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users", "1"]
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Profile",
+      "item": [
+        {
+          "name": "Get My Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users/profile",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users", "profile"]
+            }
+          }
+        },
+
+        {
+          "name": "Update My Profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newme@demo.com\",\n  \"newPassword\": \"MyPass123!\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5177/api/v1/users/profile",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "users", "profile"]
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Localization",
+      "item": [
+        {
+          "name": "Localization EN",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5177/api/v1/localization/en",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "localization", "en"]
+            }
+          }
+        },
+        {
+          "name": "Localization AR",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5177/api/v1/localization/ar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5177",
+              "path": ["api", "v1", "localization", "ar"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
