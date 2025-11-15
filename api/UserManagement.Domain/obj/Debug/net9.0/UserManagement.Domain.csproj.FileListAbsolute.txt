@@ -9,3 +9,15 @@ C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Dom
 C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\refint\UserManagement.Domain.dll
 C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.pdb
 C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\ref\UserManagement.Domain.dll
+C:\Work\user-management-task\api\UserManagement.Domain\bin\Debug\net9.0\UserManagement.Domain.deps.json
+C:\Work\user-management-task\api\UserManagement.Domain\bin\Debug\net9.0\UserManagement.Domain.dll
+C:\Work\user-management-task\api\UserManagement.Domain\bin\Debug\net9.0\UserManagement.Domain.pdb
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.AssemblyInfoInputs.cache
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.AssemblyInfo.cs
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.sourcelink.json
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.dll
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\refint\UserManagement.Domain.dll
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.pdb
+C:\Work\user-management-task\api\UserManagement.Domain\obj\Debug\net9.0\ref\UserManagement.Domain.dll

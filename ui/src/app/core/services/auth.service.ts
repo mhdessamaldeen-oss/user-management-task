@@ -6,28 +6,25 @@ import { API_BASE_URL, API_ENDPOINTS } from '../config/api.config';
 import { ROLE_NAME_BY_CODE } from '../enums/role.enum';
 
 export interface LoginRequest {
-  username: string;   // use 'email' here if your API expects email
+  username: string;
   password: string;
 }
 
 export interface LoginResponse {
   token: string;
-  expiresAt: string; // adjust to your API (ISO string etc.)
+  expiresAt: string;
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class AuthService {
-
-  private readonly baseUrl = API_BASE_URL;
 
   constructor(private http: HttpClient) {}
 
   login(model: LoginRequest): Observable<LoginResponse> {
-    const url = this.baseUrl + API_ENDPOINTS.auth.login;
-
-    return this.http.post<LoginResponse>(url, model).pipe(
+    return this.http.post<LoginResponse>(
+      API_BASE_URL + API_ENDPOINTS.auth.login,
+      model
+    ).pipe(
       tap(res => {
         localStorage.setItem('access_token', res.token);
         localStorage.setItem('token_expires_at', res.expiresAt);
@@ -47,45 +44,37 @@ export class AuthService {
   isAuthenticated(): boolean {
     return !!this.getToken();
   }
-getUserName(): string | null {
-  const token = this.getToken();
-  if (!token) return null;
 
-  try {
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    return payload['unique_name'] || null;
-  } catch {
-    return null;
-  }
-}
+  getUserName(): string | null {
+    const token = this.getToken();
+    if (!token) return null;
 
-getUserRoles(): string[] {
-  const token = this.getToken();
-  if (!token) return [];
-
-  try {
-    const payload = JSON.parse(atob(token.split('.')[1]));
-
-    // 1) Typical 'role' / 'roles'
-    let roles: any = payload['role'] || payload['roles'];
-
-    // 2) ASP.NET full claim type for role (your current token)
-    const msRoleClaim = 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role';
-    if (!roles && payload[msRoleClaim]) {
-      roles = payload[msRoleClaim];
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      return payload['unique_name'] || null;
+    } catch {
+      return null;
     }
-
-    if (!roles) return [];
-
-    const rawRoles: string[] = Array.isArray(roles) ? roles : [roles];
-
-    // 👇 map "1" → "Admin", "2" → "User", etc.
-    return rawRoles.map(code => ROLE_NAME_BY_CODE[code] ?? code);
-  } catch {
-    return [];
   }
-}
 
+  getUserRoles(): string[] {
+    const token = this.getToken();
+    if (!token) return [];
 
-  
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+
+      let roles: any = payload['role'] || payload['roles'];
+      const msClaim = 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role';
+      if (!roles && payload[msClaim]) roles = payload[msClaim];
+
+      if (!roles) return [];
+
+      const rawRoles: string[] = Array.isArray(roles) ? roles : [roles];
+      return rawRoles.map(code => ROLE_NAME_BY_CODE[code] ?? code);
+
+    } catch {
+      return [];
+    }
+  }
 }

@@ -1,15 +1,21 @@
-
-export const API_BASE_URL = 'http://localhost:5177/api'; 
+// src/app/core/config/api.config.ts
+export const API_BASE_URL = 'http://localhost:5177/api/v1';
 
 export const API_ENDPOINTS = {
   auth: {
-    login: '/v1/auth/login',   
+    login: '/auth/login',
   },
+
   users: {
-    list: '/v1/users',
-    byId: (id: string | number) => `/v1/users/${id}`,
-    create: '/v1/users',
-    update: (id: string | number) => `/v1/users/${id}`,
-    delete: (id: string | number) => `/v1/users/${id}`,
+    list: '/users',
+    byId: (id: string | number) => `/users/${id}`,
+    create: '/users',
+    update: (id: string | number) => `/users/${id}`,
+    delete: (id: string | number) => `/users/${id}`,
+    dt: '/users/dt'
+  },
+
+  localization: {
+    byLang: (lang: string) => `/localization/${lang}`
   }
 };

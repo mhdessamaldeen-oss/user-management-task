@@ -1,6 +1,9 @@
+// src/app/core/services/user.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+import { API_BASE_URL, API_ENDPOINTS } from '../config/api.config';
 
 export interface PagedResult<T> {
   items: T[];
@@ -38,16 +41,6 @@ export interface UpdateProfilePayload {
   newPassword?: string | null;
 }
 
-export interface UserListQuery {
-  search?: string;
-  role?: string;
-  page?: number;
-  pageSize?: number;
-  sort?: string;
-  dir?: 'asc' | 'desc';
-}
-
-// 🔹 DataTable response shape from /api/v1/users/dt
 export interface DataTableResponse<T> {
   draw: number;
   recordsTotal: number;
@@ -57,64 +50,74 @@ export interface DataTableResponse<T> {
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-  private baseUrl = 'http://localhost:5177/api/v1/users';
 
   constructor(private http: HttpClient) {}
 
-  // ✅ original list endpoint (GET /api/v1/users)
-  getUsers(query: UserListQuery): Observable<PagedResult<UserSummary>> {
+  // GET users
+  getUsers(query: any): Observable<PagedResult<UserSummary>> {
     let params = new HttpParams();
 
-    if (query.search) params = params.set('search', query.search);
-    if (query.role) params = params.set('role', query.role);
-    if (query.page) params = params.set('page', query.page.toString());
-    if (query.pageSize) params = params.set('pageSize', query.pageSize.toString());
-    if (query.sort) params = params.set('sort', query.sort);
-    if (query.dir) params = params.set('dir', query.dir);
+    Object.keys(query).forEach(key => {
+      if (query[key] !== undefined && query[key] !== null) {
+        params = params.set(key, query[key]);
+      }
+    });
 
-    return this.http.get<PagedResult<UserSummary>>(this.baseUrl, { params });
+    return this.http.get<PagedResult<UserSummary>>(
+      API_BASE_URL + API_ENDPOINTS.users.list,
+      { params }
+    );
   }
 
-  // ✅ DataTable server-side endpoint (POST /api/v1/users/dt)
+  // DataTable
   getUsersDataTable(dtReq: any, role?: string): Observable<DataTableResponse<UserSummary>> {
     let params = new HttpParams();
 
-    // role is enum on backend (UserRole?),
-    // here we pass string name: 'Admin' | 'User' | 'ReadOnlyUser'
-    if (role && role !== 'All') {
-      params = params.set('role', role);
-    }
+    if (role && role !== 'All') params = params.set('role', role);
 
     return this.http.post<DataTableResponse<UserSummary>>(
-      `${this.baseUrl}/dt`,
+      API_BASE_URL + API_ENDPOINTS.users.dt,
       dtReq,
       { params }
     );
   }
 
   getUser(id: number): Observable<UserSummary> {
-    return this.http.get<UserSummary>(`${this.baseUrl}/${id}`);
+    return this.http.get<UserSummary>(
+      API_BASE_URL + API_ENDPOINTS.users.byId(id)
+    );
   }
 
   createUser(payload: CreateUserPayload): Observable<UserSummary> {
-    return this.http.post<UserSummary>(this.baseUrl, payload);
+    return this.http.post<UserSummary>(
+      API_BASE_URL + API_ENDPOINTS.users.create,
+      payload
+    );
   }
 
   updateUser(id: number, payload: UpdateUserPayload): Observable<UserSummary> {
-    return this.http.put<UserSummary>(`${this.baseUrl}/${id}`, payload);
+    return this.http.put<UserSummary>(
+      API_BASE_URL + API_ENDPOINTS.users.update(id),
+      payload
+    );
   }
 
   deleteUser(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+    return this.http.delete<void>(
+      API_BASE_URL + API_ENDPOINTS.users.delete(id)
+    );
   }
 
-
-
   getUserProfile(): Observable<UserSummary> {
-  return this.http.get<UserSummary>(`${this.baseUrl}/profile`);
-}
-updateUserProfile(payload: UpdateProfilePayload): Observable<UserSummary> {
-  return this.http.put<UserSummary>(`${this.baseUrl}/profile`, payload);
-}
+    return this.http.get<UserSummary>(
+      API_BASE_URL + '/users/profile'
+    );
+  }
 
+  updateUserProfile(payload: UpdateProfilePayload): Observable<UserSummary> {
+    return this.http.put<UserSummary>(
+      API_BASE_URL + '/users/profile',
+      payload
+    );
+  }
 }
