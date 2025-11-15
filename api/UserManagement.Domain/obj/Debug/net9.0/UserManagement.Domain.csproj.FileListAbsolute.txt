@@ -1,0 +1,11 @@
+C:\Work\TaskAssessment\UserManagement.Domain\bin\Debug\net9.0\UserManagement.Domain.deps.json
+C:\Work\TaskAssessment\UserManagement.Domain\bin\Debug\net9.0\UserManagement.Domain.dll
+C:\Work\TaskAssessment\UserManagement.Domain\bin\Debug\net9.0\UserManagement.Domain.pdb
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.AssemblyInfoInputs.cache
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.AssemblyInfo.cs
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.dll
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\refint\UserManagement.Domain.dll
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\UserManagement.Domain.pdb
+C:\Work\TaskAssessment\UserManagement.Domain\obj\Debug\net9.0\ref\UserManagement.Domain.dll

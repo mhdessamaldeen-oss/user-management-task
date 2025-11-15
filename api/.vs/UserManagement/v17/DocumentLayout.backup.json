@@ -1,0 +1,222 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Work\\TaskAssessment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{92612D40-2F49-4FDD-8BC0-89F92D719097}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|c:\\work\\taskassessment\\usermanagement.infrastructure\\services\\auditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92612D40-2F49-4FDD-8BC0-89F92D719097}|UserManagement.Infrastructure\\UserManagement.Infrastructure.csproj|solutionrelative:usermanagement.infrastructure\\services\\auditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|c:\\work\\taskassessment\\usermanagement.application\\abstractions\\iauditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\abstractions\\iauditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|c:\\work\\taskassessment\\usermanagement.application\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\abstractions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\controller\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\controller\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|c:\\work\\taskassessment\\usermanagement.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\helpers\\usercontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\helpers\\usercontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\localization\\strings.ar.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\localization\\strings.ar.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\localization\\strings.en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\localization\\strings.en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\taskassessment\\usermanagement.api\\controller\\v1\\localizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\controller\\v1\\localizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuditService.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Infrastructure\\Services\\AuditService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Infrastructure\\Services\\AuditService.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Infrastructure\\Services\\AuditService.cs",
+              "RelativeToolTip": "UserManagement.Infrastructure\\Services\\AuditService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:52:19.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAuditService.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Application\\Abstractions\\IAuditService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Application\\Abstractions\\IAuditService.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Application\\Abstractions\\IAuditService.cs",
+              "RelativeToolTip": "UserManagement.Application\\Abstractions\\IAuditService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:52:17.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Application\\Abstractions\\IUserService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Application\\Abstractions\\IUserService.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Application\\Abstractions\\IUserService.cs",
+              "RelativeToolTip": "UserManagement.Application\\Abstractions\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:51:50.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "UserManagement.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:46:08.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "UserManagement.Api\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:36:36.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserContextExtensions.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Helpers\\UserContextExtensions.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Helpers\\UserContextExtensions.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Helpers\\UserContextExtensions.cs",
+              "RelativeToolTip": "UserManagement.Api\\Helpers\\UserContextExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:36:31.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "UserManagement.Api\\appsettings.json",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\appsettings.json",
+              "RelativeToolTip": "UserManagement.Api\\appsettings.json",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-15T18:34:16.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Program.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Program.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Program.cs",
+              "RelativeToolTip": "UserManagement.Api\\Program.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAYwNQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:33:10.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "strings.en.json",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Localization\\strings.en.json",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Localization\\strings.en.json",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Localization\\strings.en.json",
+              "RelativeToolTip": "UserManagement.Api\\Localization\\strings.en.json",
+              "ViewState": "AgIAADAAAAAAAAAAAADwv0wAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-14T14:40:43.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "strings.ar.json",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Localization\\strings.ar.json",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Localization\\strings.ar.json",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Localization\\strings.ar.json",
+              "RelativeToolTip": "UserManagement.Api\\Localization\\strings.ar.json",
+              "ViewState": "AgIAADEAAAAAAAAAAAAUwEwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-14T14:40:42.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "RelativeToolTip": "UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAowOUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:31:33.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LocalizationController.cs",
+              "DocumentMoniker": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "ToolTip": "C:\\Work\\TaskAssessment\\UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "RelativeToolTip": "UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:25:07.297Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

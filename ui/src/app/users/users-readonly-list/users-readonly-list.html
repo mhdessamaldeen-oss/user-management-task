@@ -1,0 +1,183 @@
+<div class="users-page">
+
+  <!-- Header -->
+  <div class="users-header-card">
+    <div class="header-left">
+      <h2 class="title">
+        {{ loc.t('Users.HeaderTitle') }}
+      </h2>
+      <div class="subtitle">
+        {{ loc.t('Users.ReadOnly.HeaderSubtitle') }}
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="filters">
+        <!-- Search -->
+        <input
+          class="form-control form-control-sm"
+          [placeholder]="loc.t('Users.SearchPlaceholder')"
+          [(ngModel)]="searchTerm"
+          (input)="reload()"
+        />
+
+        <!-- Role Filter -->
+        <select
+          class="form-select form-select-sm"
+          [(ngModel)]="roleFilter"
+          (change)="reload()"
+        >
+          <option value="All">
+            {{ loc.t('Users.Filter.AllRoles') }}
+          </option>
+          <option value="Admin">
+            {{ loc.t('Users.Filter.Admin') }}
+          </option>
+          <option value="User">
+            {{ loc.t('Users.Filter.User') }}
+          </option>
+          <option value="ReadOnlyUser">
+            {{ loc.t('Users.Filter.ReadOnlyUser') }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card -->
+  <div class="users-card mt-3">
+    <!-- Error -->
+    <div *ngIf="errorMessage" class="alert alert-danger mb-2">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Top info row: total + page size -->
+    <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+      <div class="text-muted small">
+        {{ loc.t('Users.Label.TotalUsers') }} {{ totalItems }}
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <label class="mb-0 small">
+          {{ loc.t('Users.Label.PageSize') }}
+        </label>
+        <select
+          class="form-select form-select-sm"
+          style="width: 80px"
+          [(ngModel)]="pageSize"
+          (change)="reload()"
+        >
+          <option [ngValue]="5">5</option>
+          <option [ngValue]="10">10</option>
+          <option [ngValue]="25">25</option>
+          <option [ngValue]="50">50</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-responsive">
+      <table class="table table-hover table-sm align-middle mb-0 users-table">
+        <thead class="table-light">
+          <tr>
+            <th
+              scope="col"
+              class="sortable text-nowrap"
+              style="width: 26%;"
+              (click)="sort('Username')">
+              {{ loc.t('Users.Table.Username') }}
+              <i class="ms-1" [ngClass]="sortIcon('Username')"></i>
+            </th>
+
+            <th
+              scope="col"
+              class="sortable text-nowrap"
+              style="width: 34%;"
+              (click)="sort('Email')">
+              {{ loc.t('Users.Table.Email') }}
+              <i class="ms-1" [ngClass]="sortIcon('Email')"></i>
+            </th>
+
+            <th
+              scope="col"
+              class="sortable text-nowrap"
+              style="width: 20%;"
+              (click)="sort('Role')">
+              {{ loc.t('Users.Table.Role') }}
+              <i class="ms-1" [ngClass]="sortIcon('Role')"></i>
+            </th>
+
+            <th
+              scope="col"
+              class="sortable text-nowrap"
+              style="width: 20%;"
+              (click)="sort('CreatedAt')">
+              {{ loc.t('Users.Table.Created') }}
+              <i class="ms-1" [ngClass]="sortIcon('CreatedAt')"></i>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let u of users">
+            <!-- Username + avatar -->
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="user-avatar me-2">
+                  {{ (u.username || '?') | slice:0:1 | uppercase }}
+                </div>
+                <div class="text-truncate">
+                  <div class="fw-semibold">{{ u.username }}</div>
+                </div>
+              </div>
+            </td>
+
+            <!-- Email -->
+            <td class="text-truncate">
+              <span class="text-muted small">{{ u.email }}</span>
+            </td>
+
+            <!-- Role -->
+            <td>
+              {{ getRoleName(u.role) }}
+            </td>
+
+            <!-- Created -->
+            <td class="text-nowrap">
+              {{ u.createdAt | date:'shortDate' }}
+            </td>
+          </tr>
+
+          <tr *ngIf="users.length === 0">
+            <td colspan="4" class="text-center text-muted py-3">
+              {{ loc.t('Users.Table.NoUsersFound') }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="d-flex justify-content-between align-items-center mt-3 border-top pt-2">
+      <div class="text-muted small">
+        {{ loc.t('Users.Pagination.PageLabel') }} {{ page }} / {{ totalPages }}
+      </div>
+
+      <div>
+        <button
+          class="btn btn-sm btn-secondary me-1"
+          (click)="changePage(page - 1)"
+          [disabled]="page === 1">
+          {{ loc.t('Users.Pagination.Prev') }}
+        </button>
+
+        <button
+          class="btn btn-sm btn-secondary"
+          (click)="changePage(page + 1)"
+          [disabled]="page === totalPages || totalPages === 0">
+          {{ loc.t('Users.Pagination.Next') }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

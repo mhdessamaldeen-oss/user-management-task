@@ -1,0 +1,56 @@
+<div class="login-shell">
+  <div class="login-card shadow-sm">
+    <div class="login-brand">
+      <div class="logo-circle">
+        <span>UM</span>
+      </div>
+      <div class="brand-text">
+        <div class="title">User Management</div>
+        <div class="subtitle">Sign in to continue</div>
+      </div>
+    </div>
+
+    <form (ngSubmit)="submit()">
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="model.username"
+          name="username"
+          required
+          autocomplete="username"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          [(ngModel)]="model.password"
+          name="password"
+          required
+          autocomplete="current-password"
+        />
+      </div>
+
+      <div *ngIf="errorMessage" class="alert alert-danger py-2 mb-3">
+        {{ errorMessage }}
+      </div>
+
+      <button
+        class="btn btn-primary w-100"
+        type="submit"
+        [disabled]="isLoading"
+      >
+        {{ isLoading ? 'Signing in...' : 'Sign In' }}
+      </button>
+    </form>
+
+    <div class="login-footer">
+     <span class="muted">© {{ currentYear }} User Management</span>
+
+    </div>
+  </div>
+</div>

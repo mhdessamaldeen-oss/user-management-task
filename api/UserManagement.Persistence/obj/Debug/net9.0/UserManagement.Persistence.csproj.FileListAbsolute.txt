@@ -1,0 +1,17 @@
+C:\Work\TaskAssessment\UserManagement.Persistence\bin\Debug\net9.0\UserManagement.Persistence.deps.json
+C:\Work\TaskAssessment\UserManagement.Persistence\bin\Debug\net9.0\UserManagement.Persistence.runtimeconfig.json
+C:\Work\TaskAssessment\UserManagement.Persistence\bin\Debug\net9.0\UserManagement.Persistence.dll
+C:\Work\TaskAssessment\UserManagement.Persistence\bin\Debug\net9.0\UserManagement.Persistence.pdb
+C:\Work\TaskAssessment\UserManagement.Persistence\bin\Debug\net9.0\UserManagement.Domain.dll
+C:\Work\TaskAssessment\UserManagement.Persistence\bin\Debug\net9.0\UserManagement.Domain.pdb
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.csproj.AssemblyReference.cache
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.AssemblyInfoInputs.cache
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.AssemblyInfo.cs
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.csproj.CoreCompileInputs.cache
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserMana.2CF47E73.Up2Date
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.dll
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\refint\UserManagement.Persistence.dll
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.pdb
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\UserManagement.Persistence.genruntimeconfig.cache
+C:\Work\TaskAssessment\UserManagement.Persistence\obj\Debug\net9.0\ref\UserManagement.Persistence.dll

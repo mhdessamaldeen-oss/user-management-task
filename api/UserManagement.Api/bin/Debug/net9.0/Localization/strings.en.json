@@ -1,0 +1,78 @@
+﻿{
+  "Users.HeaderTitle": "Users",
+  "Users.HeaderSubtitle": "Manage system users, roles and access.",
+
+  "Users.SearchPlaceholder": "Search by name or email...",
+  "Users.Filter.AllRoles": "All roles",
+  "Users.Filter.Admin": "Admin",
+  "Users.Filter.User": "User",
+  "Users.Filter.ReadOnlyUser": "Read-only User",
+
+  "Users.Button.NewUser": "+ New User",
+
+  "Users.Label.TotalUsers": "Total users:",
+  "Users.Label.PageSize": "Page size:",
+
+  "Users.Table.Username": "Username",
+  "Users.Table.Email": "Email",
+  "Users.Table.Role": "Role",
+  "Users.Table.Created": "Created",
+  "Users.Table.Actions": "Actions",
+  "Users.Table.NoUsersFound": "No users found.",
+
+  "Users.Pagination.Prev": "Prev",
+  "Users.Pagination.Next": "Next",
+  "Users.Button.Edit": "Edit",
+  "Users.Button.Delete": "Delete",
+  "Users.Pagination.PageLabel": "Page",
+  "Nav.Logout": "Logout",
+  "UserForm.Title.Create": "Create User",
+  "UserForm.Title.Edit": "Edit User",
+
+  "UserForm.Subtitle.Create": "Create a new user with credentials and role.",
+  "UserForm.Subtitle.Edit": "Update user details and role.",
+
+  "UserForm.Field.Username.Label": "Username",
+  "UserForm.Field.Username.Required": "Username is required.",
+  "UserForm.Field.Username.MinLength": "Username must be at least 3 characters.",
+
+  "UserForm.Field.Email.Label": "Email",
+  "UserForm.Field.Email.Required": "Email is required.",
+  "UserForm.Field.Email.Invalid": "Please enter a valid email.",
+
+  "UserForm.Field.Role.Label": "Role",
+
+  "UserForm.Field.Password.Label.Create": "Password",
+  "UserForm.Field.Password.Label.Edit": "New Password (optional)",
+  "UserForm.Field.Password.Required": "Password is required.",
+  "UserForm.Field.Password.MinLength": "Password must be at least 8 characters.",
+
+  "UserForm.Button.Cancel": "Cancel",
+  "UserForm.Button.Save": "Save",
+  "UserForm.Button.Saving": "Saving...",
+
+  "UserForm.Error.LoadUser": "Failed to load user.",
+  "UserForm.Error.CreateUser": "Failed to create user.",
+  "UserForm.Error.UpdateUser": "Failed to update user.",
+  "Users.ReadOnly.HeaderSubtitle": "",
+  "UserProfile.Title": "My Profile",
+
+  "UserProfile.Field.Username.Label": "Username",
+  "UserProfile.Field.Email.Label": "Email",
+
+  "UserProfile.Password.Title": "Change password",
+  "UserProfile.Password.Hint": "Leave the fields below empty if you do not want to change your password.",
+
+  "UserProfile.Field.NewPassword.Label": "New password",
+  "UserProfile.Field.ConfirmPassword.Label": "Confirm new password",
+
+  "UserProfile.Button.Save": "Save changes",
+
+  "UserProfile.Validation.EmailRequired": "Email is required.",
+  "UserProfile.Validation.PasswordsMismatch": "Passwords do not match.",
+
+  "UserProfile.Error.LoadProfile": "Failed to load profile.",
+  "UserProfile.Error.UpdateProfile": "Failed to update profile.",
+
+  "UserProfile.Success.ProfileUpdated": "Profile updated successfully."
+}

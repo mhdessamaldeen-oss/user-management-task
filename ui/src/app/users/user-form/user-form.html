@@ -1,0 +1,128 @@
+<div class="user-form-shell">
+  <div class="card user-form-card">
+    <div class="card-body">
+      <div class="header">
+        <div>
+          <h4 class="title mb-0">{{ title }}</h4>
+          <div class="subtitle">
+            {{
+              isEdit
+                ? loc.t('UserForm.Subtitle.Edit')
+                : loc.t('UserForm.Subtitle.Create')
+            }}
+          </div>
+        </div>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" class="mt-3">
+
+        <!-- Username -->
+        <div class="mb-3">
+          <label class="form-label">
+            {{ loc.t('UserForm.Field.Username.Label') }}
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="username"
+            [class.is-invalid]="form.get('username')?.invalid && form.get('username')?.touched"
+          />
+          <div class="invalid-feedback" *ngIf="form.get('username')?.hasError('required')">
+            {{ loc.t('UserForm.Field.Username.Required') }}
+          </div>
+          <div class="invalid-feedback" *ngIf="form.get('username')?.hasError('minlength')">
+            {{ loc.t('UserForm.Field.Username.MinLength') }}
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">
+            {{ loc.t('UserForm.Field.Email.Label') }}
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+            [class.is-invalid]="form.get('email')?.invalid && form.get('email')?.touched"
+          />
+          <div class="invalid-feedback" *ngIf="form.get('email')?.hasError('required')">
+            {{ loc.t('UserForm.Field.Email.Required') }}
+          </div>
+          <div class="invalid-feedback" *ngIf="form.get('email')?.hasError('email')">
+            {{ loc.t('UserForm.Field.Email.Invalid') }}
+          </div>
+        </div>
+
+        <!-- Role -->
+        <div class="mb-3">
+          <label class="form-label">
+            {{ loc.t('UserForm.Field.Role.Label') }}
+          </label>
+          <select
+            class="form-select"
+            formControlName="role"
+            [class.is-invalid]="form.get('role')?.invalid && form.get('role')?.touched"
+          >
+            <option *ngFor="let r of roleOptions" [value]="r.value">
+              {{ r.label }} <!-- you can localize later if you change ROLE_SELECT_OPTIONS -->
+            </option>
+          </select>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">
+            {{
+              isEdit
+                ? loc.t('UserForm.Field.Password.Label.Edit')
+                : loc.t('UserForm.Field.Password.Label.Create')
+            }}
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            [class.is-invalid]="form.get('password')?.invalid && form.get('password')?.touched"
+          />
+          <div class="invalid-feedback" *ngIf="!isEdit && form.get('password')?.hasError('required')">
+            {{ loc.t('UserForm.Field.Password.Required') }}
+          </div>
+          <div class="invalid-feedback" *ngIf="form.get('password')?.hasError('minlength')">
+            {{ loc.t('UserForm.Field.Password.MinLength') }}
+          </div>
+        </div>
+
+        <!-- Error from API -->
+        <div *ngIf="errorMessage" class="alert alert-danger py-2">
+          {{ errorMessage }}
+        </div>
+
+        <!-- Actions -->
+        <div class="actions mt-3">
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="cancel()
+            "
+            [disabled]="isSubmitting"
+          >
+            {{ loc.t('UserForm.Button.Cancel') }}
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="isSubmitting"
+          >
+            {{
+              isSubmitting
+                ? loc.t('UserForm.Button.Saving')
+                : loc.t('UserForm.Button.Save')
+            }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

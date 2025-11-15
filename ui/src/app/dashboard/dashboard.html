@@ -1,0 +1,76 @@
+<div class="dashboard-page">
+  <header class="dashboard-header">
+    <div class="title">
+      <span class="logo">UM</span>
+      <span class="text">User Management</span>
+    </div>
+
+    <!-- 🔹 Nav buttons based on role -->
+    <nav class="nav-actions" *ngIf="isAdmin || isReadOnlyUser">
+      <a
+        *ngIf="isAdmin"
+        routerLink="/users"
+        class="nav-link nav-link-users">
+        Manage users
+      </a>
+
+      <a
+        *ngIf="isReadOnlyUser"
+        routerLink="/users-read"
+        class="nav-link nav-link-users">
+        View users
+      </a>
+    </nav>
+
+    <div class="user-info" *ngIf="userName">
+      <span class="name">Hello, {{ userName }}</span>
+      <span class="roles" *ngIf="roles.length">
+        (Roles: {{ roles.join(', ') }})
+      </span>
+
+      <a class="link-profile" routerLink="/profile">
+        My profile
+      </a>
+
+      <button class="btn-logout" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <h2 class="mb-3">Available actions</h2>
+
+    <div class="action-grid">
+      <!-- Card: My profile (always visible) -->
+      <div class="action-card" routerLink="/profile" tabindex="0">
+        <h3>My profile</h3>
+        <p>Update your email and password.</p>
+      </div>
+
+      <!-- Card: Manage users (Admin only) -->
+      <div
+        class="action-card"
+        *ngIf="isAdmin"
+        routerLink="/users"
+        tabindex="0">
+        <h3>Manage users</h3>
+        <p>Add, edit, and delete users and roles.</p>
+      </div>
+
+      <!-- Card: Users (read-only) – ReadOnlyUser only -->
+      <div
+        class="action-card"
+        *ngIf="!isAdmin && isReadOnlyUser"
+        routerLink="/users-read"
+        tabindex="0">
+        <h3>Users (read-only)</h3>
+        <p>View users list, roles, and basic details.</p>
+      </div>
+
+      <!-- NOTE:
+           Role "User" (no Admin, no ReadOnlyUser) will see ONLY the profile card.
+      -->
+    </div>
+  </main>
+</div>

@@ -1,0 +1,73 @@
+<div class="layout-shell">
+  <header class="layout-header">
+    <div class="brand">
+      <div class="logo-circle">UM</div>
+      <div class="brand-text">
+        <div class="title">{{ loc.t('App.Title') }}</div>
+        <div class="subtitle">{{ loc.t('App.Subtitle') }}</div>
+      </div>
+    </div>
+
+    <div class="header-right">
+
+      <!-- Language switch -->
+      <div class="lang-switch me-3">
+        <button class="btn btn-link btn-sm" (click)="changeLang('en')">EN</button>
+        <button class="btn btn-link btn-sm" (click)="changeLang('ar')">AR</button>
+      </div>
+
+      <div class="user-block">
+        <div class="user-avatar">
+          {{ (userName || 'U').charAt(0) | uppercase }}
+        </div>
+        <div class="user-info">
+          <div class="name">
+            {{ userName || 'User' }}
+          </div>
+          <div class="roles" *ngIf="roles.length">
+            {{ roles.join(', ') }}
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="btn btn-sm btn-outline-secondary btn-logout"
+        type="button"
+        (click)="logout()">
+        {{ loc.t('Nav.Logout') }}
+      </button>
+    </div>
+  </header>
+
+  <!-- Role-based nav -->
+  <nav class="layout-nav">
+    <a
+      *ngIf="isUser"
+      routerLink="/profile"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="nav-item">
+      {{ loc.t('Nav.Profile') }}
+    </a>
+
+    <a
+      *ngIf="isAdmin"
+      routerLink="/users"
+      routerLinkActive="active"
+      class="nav-item">
+      {{ loc.t('Nav.Users') }}
+    </a>
+
+    <a
+      *ngIf="!isAdmin && isReadOnlyUser"
+      routerLink="/users-read"
+      routerLinkActive="active"
+      class="nav-item">
+      {{ loc.t('Nav.UsersReadOnly') }}
+    </a>
+  </nav>
+
+  <main class="layout-main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

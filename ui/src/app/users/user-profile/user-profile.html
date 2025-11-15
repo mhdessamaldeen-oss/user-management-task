@@ -1,0 +1,89 @@
+<div class="container py-4" *ngIf="user">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title mb-3">
+            {{ loc.t('UserProfile.Title') }}
+          </h5>
+
+          <!-- Username -->
+          <div class="mb-3">
+            <label class="form-label">
+              {{ loc.t('UserProfile.Field.Username.Label') }}
+            </label>
+            <input class="form-control" [value]="user.username" disabled />
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="form-label">
+              {{ loc.t('UserProfile.Field.Email.Label') }}
+            </label>
+            <input
+              class="form-control"
+              [(ngModel)]="email"
+              name="email"
+              type="email"
+              required
+            />
+          </div>
+
+          <hr class="my-3">
+
+          <!-- Change password section -->
+          <h6 class="mb-2">
+            {{ loc.t('UserProfile.Password.Title') }}
+          </h6>
+          <p class="text-muted small mb-3">
+            {{ loc.t('UserProfile.Password.Hint') }}
+          </p>
+
+          <!-- New password -->
+          <div class="mb-3">
+            <label class="form-label">
+              {{ loc.t('UserProfile.Field.NewPassword.Label') }}
+            </label>
+            <input
+              class="form-control"
+              [(ngModel)]="newPassword"
+              name="newPassword"
+              type="password"
+            />
+          </div>
+
+          <!-- Confirm password -->
+          <div class="mb-3">
+            <label class="form-label">
+              {{ loc.t('UserProfile.Field.ConfirmPassword.Label') }}
+            </label>
+            <input
+              class="form-control"
+              [(ngModel)]="confirmPassword"
+              name="confirmPassword"
+              type="password"
+            />
+          </div>
+
+          <!-- Messages -->
+          <div *ngIf="errorMessage" class="alert alert-danger py-2">
+            {{ errorMessage }}
+          </div>
+          <div *ngIf="successMessage" class="alert alert-success py-2">
+            {{ successMessage }}
+          </div>
+
+          <!-- Save -->
+          <button
+            class="btn btn-primary"
+            (click)="save()"
+            [disabled]="isSaving">
+            {{ loc.t('UserProfile.Button.Save') }}
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background:
+    radial-gradient(circle at top left, #e0ecff, #f3f4ff 40%, #f9fafb 70%),
+    linear-gradient(135deg, #eef2ff, #eff6ff);
+}
+
+.login-card {
+  width: 380px;
+  border-radius: 18px;
+  border: none;
+  padding: 1.75rem 1.75rem 1.25rem;
+  background: #ffffffee;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.12),
+    0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 8px 15px rgba(37, 99, 235, 0.45);
+}
+
+.brand-text {
+  .title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #111827;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    color: #6b7280;
+  }
+}
+
+.form-label {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+.form-control {
+  border-radius: 9px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  padding: 0.58rem 0.75rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.14rem rgba(37, 99, 235, 0.2);
+  }
+}
+
+.btn-primary {
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.35);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+}
+
+.alert {
+  font-size: 0.8rem;
+  border-radius: 9px;
+  margin-top: 0.25rem;
+}
+
+.login-footer {
+  margin-top: 1rem;
+  text-align: center;
+
+  .muted {
+    font-size: 0.75rem;
+    color: #9ca3af;
+  }
+}

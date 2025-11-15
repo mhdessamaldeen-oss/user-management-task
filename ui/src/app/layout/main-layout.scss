@@ -1,0 +1,99 @@
+.layout-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f3f4f6;
+}
+
+.layout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.brand-text {
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .subtitle {
+    font-size: 0.78rem;
+    color: #6b7280;
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #e5edff;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.user-info {
+  .name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #111827;
+  }
+
+  .roles {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+}
+
+.btn-logout {
+  border-radius: 999px;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.8rem;
+}
+
+.layout-main {
+  flex: 1;
+  padding: 1.5rem;
+}

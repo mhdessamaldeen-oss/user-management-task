@@ -1,0 +1,78 @@
+﻿{
+  "Users.HeaderTitle": "المستخدمون",
+  "Users.HeaderSubtitle": "إدارة مستخدمي النظام والأدوار والصلاحيات.",
+
+  "Users.SearchPlaceholder": "بحث بالاسم أو البريد الإلكتروني...",
+  "Users.Filter.AllRoles": "جميع الأدوار",
+  "Users.Filter.Admin": "مسؤول",
+  "Users.Filter.User": "مستخدم",
+  "Users.Filter.ReadOnlyUser": "مستخدم (قراءة فقط)",
+
+  "Users.Button.NewUser": "مستخدم جديد",
+
+  "Users.Label.TotalUsers": "إجمالي المستخدمين:",
+  "Users.Label.PageSize": "حجم الصفحة:",
+
+  "Users.Table.Username": "اسم المستخدم",
+  "Users.Table.Email": "البريد الإلكتروني",
+  "Users.Table.Role": "الدور",
+  "Users.Table.Created": "تاريخ الإنشاء",
+  "Users.Table.Actions": "الإجراءات",
+  "Users.Table.NoUsersFound": "لا توجد سجلات مستخدمين.",
+
+  "Users.Pagination.Prev": "السابق",
+  "Users.Pagination.Next": "التالي",
+  "Users.Button.Edit": "تعديل",
+  "Users.Button.Delete": "حذف",
+  "Users.Pagination.PageLabel": "الصفحة",
+  "Nav.Logout": "تسجيل الخروج",
+  "UserForm.Title.Create": "إنشاء مستخدم",
+  "UserForm.Title.Edit": "تعديل مستخدم",
+
+  "UserForm.Subtitle.Create": "إنشاء مستخدم جديد ببيانات الدخول والدور.",
+  "UserForm.Subtitle.Edit": "تحديث بيانات المستخدم والدور.",
+
+  "UserForm.Field.Username.Label": "اسم المستخدم",
+  "UserForm.Field.Username.Required": "اسم المستخدم مطلوب.",
+  "UserForm.Field.Username.MinLength": "يجب أن لا يقل اسم المستخدم عن 3 أحرف.",
+
+  "UserForm.Field.Email.Label": "البريد الإلكتروني",
+  "UserForm.Field.Email.Required": "البريد الإلكتروني مطلوب.",
+  "UserForm.Field.Email.Invalid": "الرجاء إدخال بريد إلكتروني صالح.",
+
+  "UserForm.Field.Role.Label": "الدور",
+
+  "UserForm.Field.Password.Label.Create": "كلمة المرور",
+  "UserForm.Field.Password.Label.Edit": "كلمة مرور جديدة (اختياري)",
+  "UserForm.Field.Password.Required": "كلمة المرور مطلوبة.",
+  "UserForm.Field.Password.MinLength": "يجب أن لا تقل كلمة المرور عن 8 أحرف.",
+
+  "UserForm.Button.Cancel": "إلغاء",
+  "UserForm.Button.Save": "حفظ",
+  "UserForm.Button.Saving": "جاري الحفظ...",
+
+  "UserForm.Error.LoadUser": "فشل في تحميل بيانات المستخدم.",
+  "UserForm.Error.CreateUser": "فشل في إنشاء المستخدم.",
+  "UserForm.Error.UpdateUser": "فشل في تحديث بيانات المستخدم.",
+  "Users.ReadOnly.HeaderSubtitle": "",
+  "UserProfile.Title": "ملفي الشخصي",
+
+  "UserProfile.Field.Username.Label": "اسم المستخدم",
+  "UserProfile.Field.Email.Label": "البريد الإلكتروني",
+
+  "UserProfile.Password.Title": "تغيير كلمة المرور",
+  "UserProfile.Password.Hint": "اترك الحقول التالية فارغة إذا كنت لا ترغب في تغيير كلمة المرور.",
+
+  "UserProfile.Field.NewPassword.Label": "كلمة المرور الجديدة",
+  "UserProfile.Field.ConfirmPassword.Label": "تأكيد كلمة المرور الجديدة",
+
+  "UserProfile.Button.Save": "حفظ التغييرات",
+
+  "UserProfile.Validation.EmailRequired": "البريد الإلكتروني مطلوب.",
+  "UserProfile.Validation.PasswordsMismatch": "كلمتا المرور غير متطابقتين.",
+
+  "UserProfile.Error.LoadProfile": "فشل في تحميل الملف الشخصي.",
+  "UserProfile.Error.UpdateProfile": "فشل في تحديث الملف الشخصي.",
+
+  "UserProfile.Success.ProfileUpdated": "تم تحديث الملف الشخصي بنجاح."
+}

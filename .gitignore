@@ -1,0 +1,56 @@
+############################
+#   ASP.NET Core / .NET   #
+############################
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.vs/
+*.vscode/
+*.DS_Store
+*.coverage
+/TestResults/
+*.config.user
+*.local.json
+appsettings.*.json
+
+############################
+#       Angular           #
+############################
+# Angular build output
+ui/dist/
+ui/.angular/
+ui/out-tsc/
+
+# Node modules
+ui/node_modules/
+node_modules/
+
+# Angular cache
+ui/.npm/
+ui/.env
+ui/.nx/
+.ui_cache/
+.angular/cache/
+
+# Environment files (you set your own)
+ui/src/environments/environment.ts
+ui/src/environments/environment.prod.ts
+
+############################
+#           Logs          #
+############################
+logs/
+*.log
+
+############################
+#        Misc             #
+############################
+# IDE files
+*.idea/
+*.iml
+
+# OS files
+Thumbs.db
