@@ -10,12 +10,10 @@ namespace UserManagement.Application.Services;
 public class UserService : IUserService
 {
     private readonly IUserRepository _repo;
-    private readonly IAuditService _audit;
 
-    public UserService(IUserRepository repo, IAuditService audit)
+    public UserService(IUserRepository repo)
     {
         _repo = repo;
-        _audit = audit;
     }
 
     public async Task<UserDto> CreateAsync(
@@ -43,15 +41,7 @@ public class UserService : IUserService
 
         await _repo.AddAsync(user, ct);
 
-        await _audit.LogAsync(
-            AuditAction.Insert.ToString(),
-            "User",
-            $"Id={user.Id}",
-            performedBy,
-            ip,
-            null,
-            ct);
-
+        // Auditing for create is handled in UsersController via IAuditService.LogChangeAsync
         return Map(user);
     }
 
@@ -82,15 +72,7 @@ public class UserService : IUserService
 
         await _repo.UpdateAsync(user, ct);
 
-        await _audit.LogAsync(
-            AuditAction.Update.ToString(),
-            "User",
-            $"Id={user.Id}",
-            performedBy,
-            ip,
-            null,
-            ct);
-
+        // Auditing for update is handled in UsersController
         return Map(user);
     }
 
@@ -114,15 +96,7 @@ public class UserService : IUserService
 
         await _repo.UpdateAsync(user, ct);
 
-        await _audit.LogAsync(
-            AuditAction.UpdateProfile.ToString(),
-            "User",
-            $"Id={user.Id}",
-            performedBy,
-            ip,
-            null,
-            ct);
-
+        // Auditing for profile update is handled in UsersController
         return Map(user);
     }
 
@@ -137,15 +111,7 @@ public class UserService : IUserService
 
         await _repo.SoftDeleteAsync(user, ct);
 
-        await _audit.LogAsync(
-            AuditAction.Delete.ToString(),
-            "User",
-            $"Id={user.Id}",
-            performedBy,
-            ip,
-            null,
-            ct);
-
+        // Auditing for soft delete is handled in UsersController
         return true;
     }
 

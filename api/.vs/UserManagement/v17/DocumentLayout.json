@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Work\\user-management-task\\api\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\user-management-task\\api\\usermanagement.api\\controller\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\controller\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E40B070A-D9C2-44D3-9D48-FC0FBD02A73D}|UserManagement.Persistence\\UserManagement.Persistence.csproj|c:\\work\\user-management-task\\api\\usermanagement.persistence\\appdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E40B070A-D9C2-44D3-9D48-FC0FBD02A73D}|UserManagement.Persistence\\UserManagement.Persistence.csproj|solutionrelative:usermanagement.persistence\\appdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\user-management-task\\api\\usermanagement.api\\usermanagement.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\usermanagement.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\user-management-task\\api\\usermanagement.api\\controller\\v1\\localizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\controller\\v1\\localizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|c:\\work\\user-management-task\\api\\usermanagement.api\\controller\\v1\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A449DC-19A5-42C7-8FC8-1B28938528E4}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\controller\\v1\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|c:\\work\\user-management-task\\api\\usermanagement.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED206B88-7A40-4755-A425-05F6A3375B05}|UserManagement.Application\\UserManagement.Application.csproj|solutionrelative:usermanagement.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbInitializer.cs",
+              "DocumentMoniker": "C:\\Work\\user-management-task\\api\\UserManagement.Persistence\\AppDbInitializer.cs",
+              "RelativeDocumentMoniker": "UserManagement.Persistence\\AppDbInitializer.cs",
+              "ToolTip": "C:\\Work\\user-management-task\\api\\UserManagement.Persistence\\AppDbInitializer.cs",
+              "RelativeToolTip": "UserManagement.Persistence\\AppDbInitializer.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAYwFUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T09:22:09.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManagement.Api",
+              "DocumentMoniker": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\UserManagement.Api.csproj",
+              "RelativeDocumentMoniker": "UserManagement.Api\\UserManagement.Api.csproj",
+              "ToolTip": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\UserManagement.Api.csproj",
+              "RelativeToolTip": "UserManagement.Api\\UserManagement.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T09:18:14.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "ToolTip": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "RelativeToolTip": "UserManagement.Api\\Controller\\V1\\UsersController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCcAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T21:30:42.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LocalizationController.cs",
+              "DocumentMoniker": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "ToolTip": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "RelativeToolTip": "UserManagement.Api\\Controller\\V1\\LocalizationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T21:30:37.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\Controller\\V1\\AuthController.cs",
+              "RelativeDocumentMoniker": "UserManagement.Api\\Controller\\V1\\AuthController.cs",
+              "ToolTip": "C:\\Work\\user-management-task\\api\\UserManagement.Api\\Controller\\V1\\AuthController.cs",
+              "RelativeToolTip": "UserManagement.Api\\Controller\\V1\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T21:30:25.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Work\\user-management-task\\api\\UserManagement.Application\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Application\\Services\\JwtTokenService.cs",
+              "ToolTip": "C:\\Work\\user-management-task\\api\\UserManagement.Application\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "UserManagement.Application\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T21:30:19.933Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
